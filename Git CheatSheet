@@ -1,0 +1,52 @@
+git diff [id] [id] : comparing 2 commits
+git diff : comparing files in "working directory vs staging area"
+git diff --staged : comparing files from staging area vs repository to make sure you want to commit those files
+git log: to see all the commits
+git checkout [id] : revert back to that commit
+git checkout - : revert back to head after checking out a previous commit
+git init : to initialize the environment for git
+git add[filename]: to add the file to the stage are [.] for all files
+git clone [url] : make a clone of that repository in your computer  
+git status : get status of the files (if commits have been made)
+git reset [file]: to remove from staging area
+git reset --hard : reset any changes in working directory and staging area 
+git commit : open an editor to add commit
+git commit -m "msg" : write the commit from bash
+git branch : to check which branch you in
+git branch [name]: create a new branch with that "name"(will have the same code as Master)
+git checkout "branch name": to switch to that branch
+git log --graph --oneline(make output shorter) [branch name] [branch name] : visualize the branches 
+git show [commit id] : compare the commit to its parent 
+git merge --abort: quit merging when conflict
+git merge [branch 1] branch 2]: merge to branch 1
+git remote : show the remotes
+git remote add [name of remote] [url]: to add new remote
+git remote -v : shows information about remote
+git push [name of remote] [branch name] : push to github
+git pull [name of remote] [branch name]: pull to local (sync github to local)
+
+
+Merging: 
+
+											
+
+
+When merge: the new file will be the tip of master branch and the commits will also be merged in master
+Conflict:
+HEAD = my code
+MASTER = other's code
+Merged common ancestor = original version that both version modified
+Pushing:
+Push each branch = push all the commits in that branch
+When clone it automatically add a remote for you
+git pull [name of remote] [branch name] = git fetch origin : to clone the commit from github to a new branch(so you can
+										Check out the commits, what have changed if u didn’t know, can 
+										Check on github first too)
+							+ git merge master origin/master: to merge the local (master) to github
+							(origin/master) branches together 
+Pull request : request to merge a branch to master branch
+When working with public repository, its standard practice to make the changes in a non-master branch within the fork
+So you can easily keep your master branch up-to-date with master of original repository
+Fast-forward merge: when you merging new branch with its ancestor
+Github merge: github never does fast-forward, always create new commit
+git config --global core.autocrlf true : crlf, lf problem
